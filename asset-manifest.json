@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/elainejiangg.github.io/static/css/main.8c43313a.css",
-    "main.js": "/elainejiangg.github.io/static/js/main.e495d935.js",
-    "static/js/453.ed3810f9.chunk.js": "/elainejiangg.github.io/static/js/453.ed3810f9.chunk.js",
+    "main.css": "/elainejiangg.github.io/static/css/main.982339af.css",
+    "main.js": "/elainejiangg.github.io/static/js/main.93533e38.js",
+    "static/media/Inter-Bold.ttf": "/elainejiangg.github.io/static/media/Inter-Bold.0eaf807b1cf0eceabe0f.ttf",
+    "static/media/Inter-Regular.ttf": "/elainejiangg.github.io/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
+    "static/media/YoungSerif-Regular.ttf": "/elainejiangg.github.io/static/media/YoungSerif-Regular.564996966d3552bf6282.ttf",
+    "static/media/DBT_mountsinai.png": "/elainejiangg.github.io/static/media/DBT_mountsinai.391a066f63323cd19796.png",
     "index.html": "/elainejiangg.github.io/index.html",
-    "main.8c43313a.css.map": "/elainejiangg.github.io/static/css/main.8c43313a.css.map",
-    "main.e495d935.js.map": "/elainejiangg.github.io/static/js/main.e495d935.js.map",
-    "453.ed3810f9.chunk.js.map": "/elainejiangg.github.io/static/js/453.ed3810f9.chunk.js.map"
+    "main.982339af.css.map": "/elainejiangg.github.io/static/css/main.982339af.css.map",
+    "main.93533e38.js.map": "/elainejiangg.github.io/static/js/main.93533e38.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c43313a.css",
-    "static/js/main.e495d935.js"
+    "static/css/main.982339af.css",
+    "static/js/main.93533e38.js"
   ]
 }
