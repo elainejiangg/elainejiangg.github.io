@@ -1,17 +1,15 @@
 {
   "files": {
-    "main.css": "/elainejiang/static/css/main.97ddda37.css",
-    "main.js": "/elainejiang/static/js/main.702c490d.js",
-    "static/media/Inter-Bold.ttf": "/elainejiang/static/media/Inter-Bold.0eaf807b1cf0eceabe0f.ttf",
-    "static/media/Inter-Regular.ttf": "/elainejiang/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
-    "static/media/YoungSerif-Regular.ttf": "/elainejiang/static/media/YoungSerif-Regular.564996966d3552bf6282.ttf",
-    "static/media/DBT_mountsinai.png": "/elainejiang/static/media/DBT_mountsinai.391a066f63323cd19796.png",
-    "index.html": "/elainejiang/index.html",
-    "main.97ddda37.css.map": "/elainejiang/static/css/main.97ddda37.css.map",
-    "main.702c490d.js.map": "/elainejiang/static/js/main.702c490d.js.map"
+    "main.css": "/elainejiangg.github.io/static/css/main.8c43313a.css",
+    "main.js": "/elainejiangg.github.io/static/js/main.e495d935.js",
+    "static/js/453.ed3810f9.chunk.js": "/elainejiangg.github.io/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/elainejiangg.github.io/index.html",
+    "main.8c43313a.css.map": "/elainejiangg.github.io/static/css/main.8c43313a.css.map",
+    "main.e495d935.js.map": "/elainejiangg.github.io/static/js/main.e495d935.js.map",
+    "453.ed3810f9.chunk.js.map": "/elainejiangg.github.io/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.97ddda37.css",
-    "static/js/main.702c490d.js"
+    "static/css/main.8c43313a.css",
+    "static/js/main.e495d935.js"
   ]
 }
