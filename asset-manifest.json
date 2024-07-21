@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/elainejiangg.github.io/static/css/main.982339af.css",
-    "main.js": "/elainejiangg.github.io/static/js/main.93533e38.js",
-    "static/media/Inter-Bold.ttf": "/elainejiangg.github.io/static/media/Inter-Bold.0eaf807b1cf0eceabe0f.ttf",
-    "static/media/Inter-Regular.ttf": "/elainejiangg.github.io/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
-    "static/media/YoungSerif-Regular.ttf": "/elainejiangg.github.io/static/media/YoungSerif-Regular.564996966d3552bf6282.ttf",
-    "static/media/DBT_mountsinai.png": "/elainejiangg.github.io/static/media/DBT_mountsinai.391a066f63323cd19796.png",
-    "index.html": "/elainejiangg.github.io/index.html",
-    "main.982339af.css.map": "/elainejiangg.github.io/static/css/main.982339af.css.map",
-    "main.93533e38.js.map": "/elainejiangg.github.io/static/js/main.93533e38.js.map"
+    "main.css": "/static/css/main.cd20342f.css",
+    "main.js": "/static/js/main.d8d92131.js",
+    "static/media/Inter-Bold.ttf": "/static/media/Inter-Bold.0eaf807b1cf0eceabe0f.ttf",
+    "static/media/Inter-Regular.ttf": "/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
+    "static/media/YoungSerif-Regular.ttf": "/static/media/YoungSerif-Regular.564996966d3552bf6282.ttf",
+    "static/media/DBT_mountsinai.png": "/static/media/DBT_mountsinai.391a066f63323cd19796.png",
+    "index.html": "/index.html",
+    "main.cd20342f.css.map": "/static/css/main.cd20342f.css.map",
+    "main.d8d92131.js.map": "/static/js/main.d8d92131.js.map"
   },
   "entrypoints": [
-    "static/css/main.982339af.css",
-    "static/js/main.93533e38.js"
+    "static/css/main.cd20342f.css",
+    "static/js/main.d8d92131.js"
   ]
 }
