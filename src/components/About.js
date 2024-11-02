@@ -15,11 +15,12 @@ const About = () => {
 
       <h2>about me</h2>
       <p>
-        hiheyhello! I’m Elaine. I am a rising sophomore at MIT majoring in 6-4
-        (AI & Decision-Making). I’m interested in computer vision and full-stack
-        development. I was born and raised in Queens, NY, but am currently based
-        in Cambridge, MA. In my free time, you can find me curating my next
-        pizza recipe or on a new scenic bike route exploring NYC/Boston.
+        hiheyhello! I’m Elaine 👋. I am a rising sophomore at MIT majoring in 6-4
+        (AI & Decision-Making), minoring in Economics. I’m interested in computer 
+        vision, NLP, and full-stack development 💻. I was born and raised in Queens, NYC 🗽, 
+        but am currently based in Cambridge, MA 🏫. In my free time, you can find me 
+        curating my next pizza recipe 🍕 or on a new scenic bike route exploring NYC/Boston 🚲 🏙️.
+        <em> I can't wait to work with you! </em>
       </p>
 
       <div className="py-3">
