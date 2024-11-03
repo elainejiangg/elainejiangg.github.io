@@ -23,11 +23,17 @@ const Contact = () => {
       <br />
       <p className="pb-1">And check up what else I've been up to here:</p>
       <div className="icons-container">
-        <a href="https://www.linkedin.com/in/elainemjiang/">
-          <FaLinkedin className="icon" />
+        <a href="https://www.linkedin.com/in/elainemjiang/" className="group">
+          <FaLinkedin
+            className="icon transition-all duration-300 ease-in-out group-hover:text-blue-300 "
+            style={{ lineHeight: 0 }}
+          />
         </a>
-        <a href="https://github.com/elainejiangg">
-          <FaGithubSquare className="icon" />
+        <a href="https://github.com/elainejiangg" className="group">
+          <FaGithubSquare
+            className="icon transition-all duration-300 ease-in-out group-hover:text-blue-300 "
+            style={{ lineHeight: 0 }}
+          />
         </a>
       </div>
     </div>
