@@ -27,7 +27,8 @@ const Projects = () => {
             </ul>
             <p>
               Your personal AI assistant to help you keep track of your
-              relationships and stay in touch with love ones
+              relationships and stay in touch with love ones. @Fluid Interfaces,
+              MIT Media Lab
             </p>
           </div>
         </div>
@@ -67,8 +68,8 @@ const Projects = () => {
             </ul>
             <p>
               Trained Faster R-CNN for tomosynthesis (3D Mammograms). Work done
-              under mentorship of the Dr. Li Shen Lab at Neuroscience Department
-              @ Mount Sinai
+              under mentorship of the Dr. Li Shen Lab @Icahn School of Medicine
+              at Mount Sinai, Neuroscience
             </p>
           </div>
         </div>
