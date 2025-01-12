@@ -9,7 +9,7 @@ const Projects = () => {
     <div className="projects-container">
       <h2 id="projects">projects</h2>
       <div className="projects-list">
-        <div className="project-item">
+        <div className="project-item p-4 text-black hover:bg-gradient-to-r hover:from-indigo-100 hover:via-blue-100 hover:to-red-50">
           <div className="img-container  max-w-1/5 relative">
             <iframe
               className="absolute top-0 left-0 w-full"
@@ -33,7 +33,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="project-item">
+        <div className="project-item p-4 text-black hover:bg-gradient-to-r hover:from-indigo-100 hover:via-blue-100 hover:to-red-50">
           <div className="img-container">
             <a href="https://github.com/elainejiangg/LINK-Federal-State-Benefits-RAG-Chatbot">
               <img className="w" src={Link}></img>
@@ -53,7 +53,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="project-item">
+        <div className="project-item p-4 text-black hover:bg-gradient-to-r hover:from-indigo-100 hover:via-blue-100 hover:to-red-50">
           <div className="img-container">
             <a href="https://github.com/elainejiangg/DBT_Breast_Cancer_Deep_Learning">
               <img className="w" src={DBTMountSinai}></img>

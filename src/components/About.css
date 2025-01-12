@@ -22,7 +22,7 @@ p {
 }
 
 .title-container {
-  padding-bottom: 10px;
+  padding-bottom: 4px;
 }
 
 .icons-container {
@@ -47,6 +47,37 @@ p {
 
 #title-caption {
   padding-top: 8.5vh;
+}
+
+.typing-effect {
+  min-height: 6em; /* Reserve enough height for two lines of text */
+  display: inline-block; /* Keep the space intact even when empty */
+  line-height: 1.5em; /* Adjust line spacing to match font size */
+  font-size: 1.25em;
+}
+
+.blinking-cursor {
+  display: inline-block;
+  width: 1ch; /* Width of a single character */
+  height: 1.5em; /* Match the line height of the text */
+  background-color: transparent;
+  animation: blink 1s step-start infinite;
+  color: rgb(135, 135, 135); /* Matches the text color */
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 /* for viewing screens of <= 640 px*/
