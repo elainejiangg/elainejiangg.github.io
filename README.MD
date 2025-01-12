@@ -2,7 +2,6 @@
 
 ```
 npm install && npm start
-
 ```
 
 # To build and deploy:
