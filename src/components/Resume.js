@@ -10,7 +10,7 @@ const Resume = () => {
       </span>
 
       {/* <a
-        href="https://drive.google.com/uc?export=download&id=1BcOLoet7PfjilQlyvl7hUyJc_Rgz3aES"
+        href="https://drive.google.com/uc?export=download&id=[ID]"
         download="ElaineJiang_Resume.pdf"
         className="group transition-all duration-300 ease-in-out"
       >
@@ -22,7 +22,7 @@ const Resume = () => {
         </button>
       </a> */}
       {/* <iframe
-        src="https://drive.google.com/file/d/1BcOLoet7PfjilQlyvl7hUyJc_Rgz3aES/preview"
+        src="https://drive.google.com/file/d/[ID]/preview"
         width="100%"
         height="450px"
         allow="autoplay"
