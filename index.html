@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJPHOTOS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a href="#home" class="brand" aria-label="Back to top">
+        <span class="brand__mark">EJPHOTOS</span>
+        <!-- <span class="brand__name">E. Jiang</span> -->
+      </a>
+      <nav class="site-nav">
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="gallery-section">
+        <h2 class="visually-hidden">Portfolio</h2>
+        <!-- <p class="gallery-intro">the flicks from my ricoh griii</p> -->
+        <!-- Duplicate or remove the <figure> blocks below to add or remove photos.
+             Update the src to match files dropped into /images and edit the data-caption text. -->
+        <div class="gallery" aria-live="polite">
+          <figure class="gallery-item">
+            <img
+              src="images/1B80F835-471D-4C29-91A3-7B2D6FA1F3A9_1_102_o.jpeg"
+              alt="Shakespeare in the park: Twelfth Night. Central Park, NYC. August 2025."
+              loading="lazy"
+              data-caption="Shakespeare in the park: Twelfth Night. Central Park, NYC. August 2025."
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="images/110F3658-DDE8-49C1-AD68-AD242BFF6062_1_105_c.jpeg"
+              alt="Portrait of a woman in a park. Central Park, NYC. August 2025."
+              loading="lazy"
+              data-caption="Portrait study in dappled shadow."
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="images/E12F8E08-A064-43F7-BE68-6954DA63AED7_1_105_c.jpeg"
+              alt="Minimal architecture line study"
+              loading="lazy"
+              data-caption="Minimal architecture along the High Line."
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="images/E4C52774-9578-4689-ACB3-CA1DF3A44757_1_105_c.jpeg"
+              alt="Rainy street scene at night"
+              loading="lazy"
+              data-caption="Rain-soaked neon in Shibuya."
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="images/FBC04391-165D-4342-B0FB-FDA90EB57F5F_1_105_c.jpeg"
+              alt="Cinematic desert landscape"
+              loading="lazy"
+              data-caption="Desert dawn in Marfa."
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="images/49416B21-6EAC-4EC9-ABDB-55220D6EF744_1_105_c.jpeg"
+              alt="Intimate documentary moment"
+              loading="lazy"
+              data-caption="Quiet documentary moment, Oaxaca."
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section id="about" class="info-section">
+        <h2>About</h2>
+        <p>for funsies.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>© <span id="year"></span> EJPHOTOS — All rights reserved.</small>
+    </footer>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <div class="lightbox__content" role="dialog" aria-modal="true">
+        <button class="lightbox__close" aria-label="Close lightbox">
+          &times;
+        </button>
+        <div class="lightbox__body">
+          <button
+            class="lightbox__nav lightbox__nav--prev"
+            aria-label="Previous photo"
+          >
+            &larr;
+          </button>
+          <img src="" alt="" id="lightboxImage" />
+          <button
+            class="lightbox__nav lightbox__nav--next"
+            aria-label="Next photo"
+          >
+            &rarr;
+          </button>
+        </div>
+        <p id="lightboxCaption"></p>
+      </div>
+    </div>
+  </body>
+</html>
