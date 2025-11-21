@@ -1,5 +1,4 @@
-// Lightbox + caption handling
-// To change captions: update the data-caption attribute on each <img>.
+// Lightbox handling + dynamic gallery loading.
 document.addEventListener("DOMContentLoaded", () => {
   const lightbox = document.getElementById("lightbox");
   const lightboxImage = document.getElementById("lightboxImage");
@@ -7,10 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeButton = document.querySelector(".lightbox__close");
   const prevButton = document.querySelector(".lightbox__nav--prev");
   const nextButton = document.querySelector(".lightbox__nav--next");
+  const gallery = document.getElementById("gallery");
 
-  const galleryImages = Array.from(
-    document.querySelectorAll(".gallery-item img")
-  );
+  let galleryImages = [];
   let currentIndex = 0;
 
   const setActiveImage = (index) => {
@@ -18,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!img) return;
     lightboxImage.src = img.src;
     lightboxImage.alt = img.alt || "";
-    lightboxCaption.textContent = img.dataset.caption || "";
+    lightboxCaption.textContent = "";
   };
 
   const openLightbox = (index) => {
@@ -52,16 +50,18 @@ document.addEventListener("DOMContentLoaded", () => {
     setActiveImage(currentIndex);
   };
 
-  galleryImages.forEach((img, index) => {
-    img.addEventListener("click", () => openLightbox(index));
-    img.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        openLightbox(index);
-      }
+  const bindImageEvents = () => {
+    galleryImages.forEach((img, index) => {
+      img.addEventListener("click", () => openLightbox(index));
+      img.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openLightbox(index);
+        }
+      });
+      img.setAttribute("tabindex", "0");
     });
-    img.setAttribute("tabindex", "0");
-  });
+  };
 
   closeButton.addEventListener("click", closeLightbox);
   prevButton?.addEventListener("click", (event) => {
@@ -93,6 +93,74 @@ document.addEventListener("DOMContentLoaded", () => {
       showPrevImage();
     }
   });
+
+  const fetchImageList = async () => {
+    const response = await fetch("images.json", { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error("Unable to read images.json manifest.");
+    }
+
+    const payload = await response.json();
+    const maybeList = Array.isArray(payload)
+      ? payload
+      : Array.isArray(payload?.images)
+      ? payload.images
+      : [];
+
+    const sanitizePath = (path) => {
+      if (typeof path !== "string") return null;
+      const cleanPath = path.trim().replace(/^\.\//, "");
+      if (!cleanPath) return null;
+      const normalized = cleanPath.startsWith("images/")
+        ? cleanPath
+        : `images/${cleanPath}`;
+      const base = normalized.split("?")[0] || "";
+      if (!/\.(jpe?g|png|gif|webp|avif)$/i.test(base)) return null;
+      return normalized;
+    };
+
+    return [...new Set(maybeList.map(sanitizePath).filter(Boolean))];
+  };
+
+  const renderGallery = (sources) => {
+    gallery.innerHTML = "";
+    const fragment = document.createDocumentFragment();
+    sources.forEach((src) => {
+      const figure = document.createElement("figure");
+      figure.className = "gallery-item";
+
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = "";
+      img.loading = "lazy";
+
+      figure.appendChild(img);
+      fragment.appendChild(figure);
+    });
+
+    gallery.appendChild(fragment);
+    galleryImages = Array.from(gallery.querySelectorAll("img"));
+    bindImageEvents();
+  };
+
+  const initGallery = async () => {
+    try {
+      const sources = await fetchImageList();
+      if (!sources.length) {
+        galleryImages = [];
+        gallery.innerHTML = "";
+        console.warn(
+          "No images found inside /images. Drop files there to populate the gallery."
+        );
+        return;
+      }
+      renderGallery(sources);
+    } catch (error) {
+      console.error("Failed to load images from /images", error);
+    }
+  };
+
+  initGallery();
 
   // Simple year stamp
   const yearElement = document.getElementById("year");
