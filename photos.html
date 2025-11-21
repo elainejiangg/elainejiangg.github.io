@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photos — ejphotos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="site-nav site-nav--center">
+        <a href="index.html">about</a>
+        <a href="#gallery-title">photos</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="gallery-section" aria-labelledby="gallery-title">
+        <div class="gallery-lede">
+          <p class="gallery-lede__eyebrow">selected frames</p>
+          <h1 id="gallery-title">light studies</h1>
+          <p>
+            A living sequence from New York, Arizona, Washington, Massachusetts, and anywhere
+            else the cam comes along.
+          </p>
+        </div>
+        <div class="gallery" id="gallery" aria-live="polite">
+          <!-- Images load automatically from images.json via script.js -->
+        </div>
+      </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <div class="lightbox__content" role="dialog" aria-modal="true">
+        <button class="lightbox__close" aria-label="Close lightbox">
+          &times;
+        </button>
+        <div class="lightbox__body">
+          <button
+            class="lightbox__nav lightbox__nav--prev"
+            aria-label="Previous photo"
+          >
+            &larr;
+          </button>
+          <img src="" alt="" id="lightboxImage" />
+          <button
+            class="lightbox__nav lightbox__nav--next"
+            aria-label="Next photo"
+          >
+            &rarr;
+          </button>
+        </div>
+        <p id="lightboxCaption"></p>
+      </div>
+    </div>
+  </body>
+</html>

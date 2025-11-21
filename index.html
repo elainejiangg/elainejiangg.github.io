@@ -3,61 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EJPHOTOS</title>
+    <title>ejphotos</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
     <header class="site-header" id="top">
-      <a href="#home" class="brand" aria-label="Back to top">
-        <span class="brand__mark">EJPHOTOS</span>
-        <!-- <span class="brand__name">E. Jiang</span> -->
-      </a>
-      <nav class="site-nav">
-        <a href="#about">About</a>
+      <nav class="site-nav site-nav--center">
+        <a href="#about">about</a>
+        <a href="photos.html">photos</a>
       </nav>
     </header>
 
     <main>
-      <section id="home" class="gallery-section">
-        <h2 class="visually-hidden">Portfolio</h2>
-        <div class="gallery" id="gallery" aria-live="polite">
-          <!-- Images load automatically from /images via script.js -->
+      <section class="hero">
+        <div class="hero__content">
+          <h3 class="hero__title">hiheyhello! i’m elaine.</h3>
+          <p class="hero__tagline">
+            collector of fleeting light (aka photographer), fresh-air enthusiast (aka
+            plant mom & let's-go-outside-er!), and beep-boop-bop click-clacker (aka software engineer)
+          </p>
+          <div class="hero__bio">
+            <p>
+              I’m usually walking with a Ricoh GR III tucked in my pocket and a
+              few spare batteries— chasing quiet frames, generous negative
+              space, the feeling that you just arrived in the middle of a
+              story.
+            </p>
+            <div class="hero__grid">
+              <div>
+                <p class="hero__label">latest whereabouts</p>
+                <ul class="hero__list">
+                  <li>Queens, NY</li>
+                  <li>Boston, MA</li>
+                  <li>Tempe, AZ</li>
+                  <li>Seattle, WA</li>
+                </ul>
+              </div>
+              <div>
+                <p class="hero__label">day job</p>
+                <p class="hero__note">
+                  MIT student, newsletter devourer, and software engineer.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
 
-      <section id="about" class="info-section">
-        <h2>About</h2>
-        <p>for funsies.</p>
+        <div class="hero__actions">
+          <a class="button-link" href="photos.html">flicks</a>
+          <a
+            class="button-link"
+            href="https://www.linkedin.com/in/elainemjiang/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            class="button-link"
+            href="https://github.com/elainejiangg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <small>© <span id="year"></span> EJPHOTOS — All rights reserved.</small>
-    </footer>
-
-    <div class="lightbox" id="lightbox" aria-hidden="true">
-      <div class="lightbox__content" role="dialog" aria-modal="true">
-        <button class="lightbox__close" aria-label="Close lightbox">
-          &times;
-        </button>
-        <div class="lightbox__body">
-          <button
-            class="lightbox__nav lightbox__nav--prev"
-            aria-label="Previous photo"
-          >
-            &larr;
-          </button>
-          <img src="" alt="" id="lightboxImage" />
-          <button
-            class="lightbox__nav lightbox__nav--next"
-            aria-label="Next photo"
-          >
-            &rarr;
-          </button>
-        </div>
-        <p id="lightboxCaption"></p>
-      </div>
-    </div>
   </body>
 </html>
