@@ -6,6 +6,12 @@
     <title>elaine jiang</title>
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      })();
+    </script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -14,6 +20,14 @@
         <a href="#about">about</a>
         <a href="photos.html">photos</a>
         <a href="noodlings.html">noodlings</a>
+        <button
+          id="dark-mode-toggle"
+          class="dark-mode-toggle"
+          aria-label="Switch to dark mode"
+          title="Toggle dark mode"
+        >
+          ☽
+        </button>
       </nav>
     </header>
 
@@ -21,10 +35,7 @@
       <section class="hero">
         <div class="hero__content">
           <h3 class="hero__title">hiheyhello! i’m elaine.</h3>
-          <p class="hero__aside">
-            fyi:
-             not a portfolio — just breadcrumbs.
-          </p>
+          <p class="hero__aside">fyi: not a portfolio — just breadcrumbs.</p>
 
           <p class="hero__tagline">
             fleeting light collecter (aka photographer), fresh-air enthusiast

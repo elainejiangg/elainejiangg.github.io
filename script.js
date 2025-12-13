@@ -172,4 +172,35 @@ document.addEventListener("DOMContentLoaded", () => {
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
   }
+
+  // Dark mode toggle
+  const initDarkMode = () => {
+    const toggleButton = document.getElementById("dark-mode-toggle");
+    if (!toggleButton) return;
+
+    // Get current theme (already applied by IIFE above)
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    updateToggleIcon(currentTheme);
+
+    toggleButton.addEventListener("click", () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+      updateToggleIcon(newTheme);
+    });
+  };
+
+  const updateToggleIcon = (theme) => {
+    const toggleButton = document.getElementById("dark-mode-toggle");
+    if (!toggleButton) return;
+    toggleButton.textContent = theme === "dark" ? "☼" : "☽";
+    toggleButton.setAttribute(
+      "aria-label",
+      theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+    );
+  };
+
+  initDarkMode();
 });

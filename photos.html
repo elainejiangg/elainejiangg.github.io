@@ -6,6 +6,12 @@
     <title>elaine jiang</title>
     <link rel="icon" type="image/jpeg" href="favicon.jpeg" />
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      })();
+    </script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -14,6 +20,14 @@
         <a href="index.html">about</a>
         <a href="#gallery-title">photos</a>
         <a href="noodlings.html">noodlings</a>
+        <button
+          id="dark-mode-toggle"
+          class="dark-mode-toggle"
+          aria-label="Switch to dark mode"
+          title="Toggle dark mode"
+        >
+          ☽
+        </button>
       </nav>
     </header>
 
