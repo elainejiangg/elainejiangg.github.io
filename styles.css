@@ -609,6 +609,10 @@ main {
   transition: color 0.2s ease;
 }
 
+.link-like {
+  color: var(--muted);
+}
+
 .noodlings-list a::after {
   content: "";
   position: absolute;
