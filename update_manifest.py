@@ -13,6 +13,7 @@ are included.
 from __future__ import annotations
 
 import json
+import random
 from pathlib import Path
 
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".avif"}
@@ -24,7 +25,9 @@ def collect_images(images_dir: Path) -> list[str]:
   for file_path in images_dir.iterdir():
     if file_path.is_file() and file_path.suffix.lower() in IMAGE_EXTENSIONS:
       images.append(f"images/{file_path.name}")
-  return sorted(images, key=str.casefold)
+
+  random.shuffle(images)
+  return images
 
 
 def write_manifest(manifest_path: Path, entries: list[str]) -> None:
